@@ -57,6 +57,6 @@
                     Content="Создать заказ"
                     Width="120" Height="30"
                     Background="#FF4CAF50" Foreground="White"/>
-        </StackPanel>
-    </Grid>
+        </StackPanel> 
+    </Grid> 
 </Window>
