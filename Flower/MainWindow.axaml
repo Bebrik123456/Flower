@@ -21,10 +21,10 @@
            <StackPanel HorizontalAlignment="Center" Spacing="20" Margin="0 12 0 0">
                <TextBlock Text="Авторизация" FontSize="22"/>
                <TextBlock Text="Логин" FontSize="20" HorizontalAlignment="Center"/>
-               <TextBox Watermark="Логин"  Width="150" />
+               <TextBox Watermark="Логин"  Width="150" Name="LoginTextBox" />
                <TextBlock Text="Пароль" FontSize="20" HorizontalAlignment="Center"/>
-               <TextBox Watermark="Пароль" MaxWidth="150" />
-               <Button Content="Войти"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Click="Button_OnClick"/>
+               <TextBox Watermark="Пароль" MaxWidth="150" Name="PasswordTextBox"/>
+               <Button Content="Войти"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Click="Button_OnClick" />
            </StackPanel>
        </Grid>
        
