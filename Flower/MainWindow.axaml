@@ -25,6 +25,7 @@
                <TextBlock Text="Пароль" FontSize="20" HorizontalAlignment="Center"/>
                <TextBox Watermark="Пароль" MaxWidth="150" Name="PasswordTextBox"/>
                <Button Content="Войти"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Click="Button_OnClick" />
+               <Label Name="OshibkaLabel" />
            </StackPanel>
        </Grid>
        
