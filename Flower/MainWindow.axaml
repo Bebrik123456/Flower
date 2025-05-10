@@ -14,7 +14,7 @@
        </Grid.ColumnDefinitions>
        
        <Grid Grid.Column="0">
-           
+           <Image Source="Image/Logo.jpg"  />
        </Grid>
        
        <Grid Grid.Column="1">
