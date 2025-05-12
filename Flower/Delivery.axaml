@@ -5,8 +5,28 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Flower.Delivery"
         Title="Delivery">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
-        <Grid>
-                <Label> будет сделано</Label>
+        <Grid Grid.Row="0">
+            <StackPanel HorizontalAlignment="Center" Margin="0 20 0 0" Spacing="10">
+            <TextBlock Text="Заказы в работе" FontSize="20" />
+            <ListBox />
+            <Button Content="Принять заказ" HorizontalAlignment="Center"/>
+            </StackPanel>
         </Grid>
+        
+        <Grid Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center" Margin="0 20 0 0" Spacing="10">
+                <TextBlock Text="Принятые заказы" FontSize="20" />
+                <ListBox />
+                <Button Content="Принять заказ" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
 </Window>
