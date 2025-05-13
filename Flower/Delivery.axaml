@@ -23,8 +23,8 @@
         <Grid Grid.Row="1">
             <StackPanel HorizontalAlignment="Center" Margin="0 20 0 0" Spacing="10">
                 <TextBlock Text="Принятые заказы" FontSize="20" />
-                <ListBox />
-                <Button Content="Принять заказ" HorizontalAlignment="Center"/>
+                <ListBox  />
+                <Button Content="Завершить заказ заказ" HorizontalAlignment="Center"/>
             </StackPanel>
         </Grid>
         
