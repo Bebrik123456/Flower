@@ -5,22 +5,19 @@ using Avalonia.Markup.Xaml;
 
 namespace Flower;
 
-public partial class AdminWindow : Window
+public partial class Create : Window
 {
-    public AdminWindow()
+    public Create()
     {
         InitializeComponent();
     }
 
-
-    private void CreateButton_OnClick(object? sender, RoutedEventArgs e)
+    private void BackButton(object? sender, RoutedEventArgs e)
     {
-        Create create = new Create();   
         Hide();
-        create.Show();
+        AdminWindow adminWindow = new AdminWindow();
+        adminWindow.Show();
         this.Close();
-        
+      
     }
-
-
 }
