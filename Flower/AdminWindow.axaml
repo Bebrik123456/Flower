@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Flower.AdminWindow"
+        Title="AdminWindow">
+   <Grid RowDefinitions="Auto,*,Auto" Margin="10">
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Text="Управление заказами" 
+                   FontSize="20" 
+                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <!-- Пустой список заказов (заполнится через код) -->
+        <DataGrid Grid.Row="1" Name="OrdersDataGrid" 
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Width="Auto"/>
+                <DataGridTextColumn Header="Клиент" Width="*"/>
+                <DataGridTextColumn Header="Телефон" Width="150"/>
+                <DataGridTextColumn Header="Адрес" Width="2*"/>
+                <DataGridTextColumn Header="Магазин" Width="*"/>
+                <DataGridTextColumn Header="Сумма" Width="100"/>
+
+                <!-- Колонка для смены статуса -->
+                <DataGridTemplateColumn Header="Статус" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox Name="StatusComboBox" Margin="2"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Колонка для отметки об оплате -->
+                <DataGridTemplateColumn Header="Оплачено" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Name="IsPaidCheckBox" 
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Кнопки в правом нижнем углу -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Name="ViewEmployeesButton" 
+                    Content="Посмотреть сотрудников"
+                    MinWidth="180" Height="30"
+                    Margin="0,0,10,0"/>
+
+            <Button Click="CreateButton_OnClick"
+                    Name="CreateOrderButton" 
+                    Content="Создать заказ"
+                    Width="120" Height="30"
+                    Background="#FF4CAF50" Foreground="White"/>
+        </StackPanel> 
+    </Grid> 
+</Window>
