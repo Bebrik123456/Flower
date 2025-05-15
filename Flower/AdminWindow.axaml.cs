@@ -19,7 +19,14 @@ public partial class AdminWindow : Window
         Hide();
         create.Show();
         this.Close();
-        
+    }
+
+    private void ListEploeeButton(object? sender, RoutedEventArgs e)
+    {
+        List_of_employees list = new List_of_employees();
+        Hide();
+        list.Show();
+        this.Close();
     }
 
 

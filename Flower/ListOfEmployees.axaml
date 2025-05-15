@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Flower.List_of_employees"
-        Title="List_of_employees">
+        Title="Список сотрудников">
         
         <Grid>
             <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 5 5 0 0 " Click="BackButton_Click"/>
