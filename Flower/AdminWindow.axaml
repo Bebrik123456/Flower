@@ -10,40 +10,9 @@
         <TextBlock Grid.Row="0" Text="Управление заказами" 
                    FontSize="20" 
                    HorizontalAlignment="Center" Margin="0,0,0,10"/>
-
-        <!-- Пустой список заказов (заполнится через код) -->
-        <DataGrid Grid.Row="1" Name="OrdersDataGrid" 
-                  AutoGenerateColumns="False"
-                  IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Номер" Width="Auto"/>
-                <DataGridTextColumn Header="Клиент" Width="*"/>
-                <DataGridTextColumn Header="Телефон" Width="150"/>
-                <DataGridTextColumn Header="Адрес" Width="2*"/>
-                <DataGridTextColumn Header="Магазин" Width="*"/>
-                <DataGridTextColumn Header="Сумма" Width="100"/>
-
-                <!-- Колонка для смены статуса -->
-                <DataGridTemplateColumn Header="Статус" Width="150">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <ComboBox Name="StatusComboBox" Margin="2"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-                <!-- Колонка для отметки об оплате -->
-                <DataGridTemplateColumn Header="Оплачено" Width="80">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox Name="IsPaidCheckBox" 
-                                      HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+   <Grid Grid.Row="1">
+        <ListBox Name="OrdersListBox" />
+   </Grid>     
 
         <!-- Кнопки в правом нижнем углу -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" 
