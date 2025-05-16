@@ -8,8 +8,11 @@
         
         <Grid>
             <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 5 5 0 0 " Click="BackButton_Click"/>
-            <StackPanel HorizontalAlignment="Center" Margin=" 0 20 0 0">
+            <StackPanel HorizontalAlignment="Center" Margin=" 0 20 0 0" >
                 <Label Content="Список сотрудников" FontSize="20"/>
+                <ScrollViewer Height="200">
+                <ListBox Name="OrdersListBox" />
+                </ScrollViewer>
                 
             </StackPanel>       
         </Grid>

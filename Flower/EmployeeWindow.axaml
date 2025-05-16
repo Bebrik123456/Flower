@@ -35,7 +35,10 @@
                         Content="Обновить" />
                 
             </StackPanel>
-            
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <ListBox Name="OrdersListBox" SelectionChanged="OrdersListBox_OnSelectionChanged" />
         </Grid>
         
     </Grid>
