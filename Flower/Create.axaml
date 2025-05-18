@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Flower.Create"
+        Title="Создание заказа">
+        
+        <Grid>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="BackButton"  Margin="5 5 0 0"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+                      <TextBlock Text="Адрес" HorizontalAlignment="Center"/>  
+                      <ComboBox MinWidth="120" HorizontalAlignment="Center" Name="ComboBox">
+                          <ComboBoxItem Content="Лермонтово" />
+                          <ComboBoxItem Content="Пушкино" />
+                          <ComboBoxItem Content="Толстого" />
+                      </ComboBox>
+                      <TextBlock Text="Название заказа" HorizontalAlignment="Center"/>  
+                      <TextBox Name="NameTextBox" MaxWidth="120" />
+                      <Button Click="CreateTask"
+                              Name="CreateOrderButton" 
+                              Content="Создать заказ"
+                              Width="120" Height="30"
+                              Background="#FF4CAF50" Foreground="White"/>
+                </StackPanel>
+            <Label Name="TestLabel" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+        </Grid>
+    
+    
+</Window>

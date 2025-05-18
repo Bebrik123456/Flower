@@ -3,6 +3,13 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Flower/AdminWindow.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/App.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/Create.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/Delivery.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/EmployeeWindow.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/List of employees.axaml" value="Flower/Flower.csproj" />
+        <entry key="Flower/ListOfEmployees.axaml" value="Flower/Flower.csproj" />
         <entry key="Flower/MainWindow.axaml" value="Flower/Flower.csproj" />
       </map>
     </option>
