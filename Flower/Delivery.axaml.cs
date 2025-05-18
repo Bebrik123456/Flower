@@ -4,6 +4,7 @@ using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Avalonia.Media;
 
 namespace Flower;
 
@@ -15,25 +16,30 @@ public partial class Delivery : Window
     {
         InitializeComponent();
         LoadOrders();
+        
+        OrdersListBox.DoubleTapped += OnListBoxDoubleTapped;
       
     }
     
-    private void MyListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private void OnListBoxDoubleTapped(object sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         // Получаем выбранный элемент
         var selectedItem = OrdersListBox.SelectedItem as string;
         if (selectedItem != null)
         {
-            // Извлекаем ID заказа из строки (предполагаем формат "ID | Name | Address...")
+            // Извлекаем ID заказа из строки
             var parts = selectedItem.Split('|');
             if (parts.Length > 0 && int.TryParse(parts[0].Trim(), out int orderId))
             {
                 // Удаляем из БД
                 DeleteFromDatabase(orderId);
-            
+                
                 // Удаляем из ListBox
                 OrdersListBox.Items.Remove(selectedItem);
             }
+
+            ReadyLabel.Content = " Заказ взят на доставку ";
+            ReadyLabel.Foreground = Brushes.Green;
         }
     }
 
@@ -65,8 +71,8 @@ public partial class Delivery : Window
         foreach (var order in orders)
         {
             // Формируем строку для отображения
-            string orderInfo = $"{order.Id} | {order.Name} | {order.Adress} | {order.PaymentStatus} | {order.Accepted} | {order.ReadyForDelivery} ";
-            OrdersListBox.Items.Add(orderInfo); // Просто добавляем текст
+            string orderInfo = $"{order.Id} | {order.Name} | {order.Adress} | Готов к доставке ";
+            OrdersListBox.Items.Add(orderInfo); 
         }
     }
     private List<Order> GetOrdersFromDatabase()
