@@ -76,7 +76,7 @@ public partial class Delivery : Window
         var conn = new MySqlConnection("Server=localhost;Database=FlowerDB;User Id=root;Password=;");
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM FlowerDB.Task", conn);
+            var cmd = new MySqlCommand("SELECT * FROM Task WHERE ReadyForDelivery = '1'", conn);  
             var reader = cmd.ExecuteReader();
             {
                 while (reader.Read())
