@@ -44,7 +44,17 @@ public partial class AdminWindow : Window
         foreach (var order in orders)
         {
             // Формируем строку для отображения
-            string orderInfo = $"{order.Id} | {order.Name} | {order.Adress} | {order.PaymentStatus} | {order.Accepted} | {order.ReadyForDelivery} ";
+            string a;
+
+            if (order.ReadyForDelivery == "0")
+            {
+                a = "Не готов к доставке";
+            }
+            else
+            { 
+                a = "Готов к доставке";
+            }
+           string orderInfo = $"{order.Id} | {order.Name} | {order.Adress} | {order.PaymentStatus} | {order.Accepted} | {a}  ";
             OrdersListBox.Items.Add(orderInfo); // Просто добавляем текст
         }
     }
